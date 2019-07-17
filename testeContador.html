@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content="text/html;charset=iso-8859-1" />
+    <title>Counter</title>
+  </head>
+
+  <body onload="start()">
+    <div id="square">
+      <div id="header"><b>Let's count them up!</b></div>
+      <div id="counter"></div>
+    </div>
+  </body>
+</html>
+
+<script type="text/javascript">
+  let count = 0;
+
+  function start() {
+    if (count < 100) {
+      count++;
+      counter.innerText = count;
+      setTimeout("start()", 1000);
+    }
+    if (count == 99) {
+      count = 0;
+    }
+  }
+</script>
+<style type="text/css">
+  body {
+    height: 100%;
+    width: 100%;
+  }
+  
+  #square {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
+
+  #counter {
+    font:  90pt Times, serif;
+    color: white;
+    width: 200px;
+    height: 150px;
+    text-align: center;
+    line-height: 200px;
+    background-color: darkgreen;
+    margin: auto;
+    line-height: 150px;
+  }
+
+  #header {
+    font: 12pt Times, serif;
+    width: 200px;
+    height: 50px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    margin: auto;
+    line-height: 50px;
+  }
+</style>
